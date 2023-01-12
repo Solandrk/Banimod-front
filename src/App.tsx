@@ -8,13 +8,20 @@ import Slider from "./Slider";
 import CardComponent from "./CardComponent";
 import CustomButton from "./CustomButton";
 import News from "./News";
+import Footer from "./Footer";
+import ProductCard from "./ProductCard";
 function App() {
   return (
     <div className="flex flex-1 flex-col bg-white ">
       {/* Discount  */}
-      <div className="w-full h-20 bg-blue-500"></div>
+      <div className="w-full h-12 bg-blue-500">
+        <img
+          className="w-full h-full object-cover"
+          src="https://www.banimode.com/img/cms/011022/1673521854.gif"
+        />
+      </div>
       {/* Title + Search box */}
-      <div className="flex w-full h-20 ">
+      <div className="flex w-full h-20 px-10 ">
         <div className="flex flex-1 flex-row items-center">
           <img
             className="mr-6 ml-4"
@@ -25,7 +32,10 @@ function App() {
             <div className="top-3 absolute right-4  w-6 h-6 rounded-lg ">
               <img src="https://cdn-icons-png.flaticon.com/512/54/54481.png" />
             </div>
-            <input className="w-full text-end  h-full bg-transparent stroke-transparent "></input>
+            <input
+              placeholder="جستجو در میان بیش از 500 برند معتبر"
+              className="w-full text-end  h-full bg-transparent stroke-transparent "
+            ></input>
           </div>
           {/* Login */}
           <div
@@ -47,7 +57,7 @@ function App() {
       {/* Body */}
       <div className="flex flex-col w-full  ">
         {/* Banners */}
-        <div className="flex w-full">
+        <div className="flex w-full px-8">
           {/* Banner */}
           <div className="flex flex-col">
             <div className="flex flex-row px-4 pt-3 justify-around">
@@ -74,7 +84,7 @@ function App() {
         </div>
 
         {/* Categories */}
-        <div className="flex w-full  flex-row justify-between px-3 mt-6">
+        <div className="flex w-full  flex-row justify-between px-10 mt-6">
           <img
             src="https://www.banimode.com/img/cms/011010/1672500063.jpg"
             className="w-40 h-36 bg-black rounded-xl"
@@ -103,11 +113,11 @@ function App() {
 
         {/* Products */}
         {/* Special Products */}
-        <div className="flex flex-col w-full ">
+        <div className="flex flex-col w-full px-10">
           <div className="flex w-full items-center flex-row  mt-10">
             {/* Timer Container */}
             <div>
-              <p className="text-xl font-bold text-green-600">
+              <p className="text-xl font-medium text-green-600">
                 زمان باقی مانده تا پایان سفارش
               </p>
               {/* Timer */}
@@ -120,12 +130,14 @@ function App() {
             </div>
           </div>
           {/* Slide Bar */}
-          <div className="flex w-full mt-6 bg-gray-400 h-80"></div>
+          <div className="flex w-full mt-6  h-96">
+            <ProductCard />
+          </div>
           <CustomButton title={"مشاهده ی همه "} />
         </div>
 
         {/* Special Products */}
-        <div className="flex flex-col w-full ">
+        <div className="flex flex-col w-full px-10 ">
           <div className="flex w-full items-center justify-center flex-row  mt-10">
             <p className="text-3xl text-black font-medium">
               پرفروش ترین محصولات
@@ -137,7 +149,7 @@ function App() {
         </div>
       </div>
       {/* تاییدیه ها  */}
-      <div className="flex flex-row w-full px-8 pt-8 mt-6 justify-between">
+      <div className="flex flex-row w-full px-10 pt-8 mt-6 justify-between">
         {/* Item */}
         <div className="flex flex-col w-1/5 h-64 items-center">
           <img src="https://www.banimode.com/img/cms/000719/1633949580.jpg"></img>
@@ -175,7 +187,7 @@ function App() {
           </p>
         </div>
       </div>
-      <div className="flex flex-col w-full bg-gray-100 mt-24">
+      <div className="flex flex-col w-full bg-gray-100 mt-24 pb-8">
         <p className="text-3xl font-medium text-center mt-8">
           {" "}
           برترین برندها در بانی مد
@@ -184,18 +196,39 @@ function App() {
         <CustomButton title={"مشاهده ی همه برند ها"} />
       </div>
 
-      <div className="flex flex-col mt-16">
+      <div className="flex flex-col mt-16 px-10">
         <p className="text-3xl text-black font-medium text-center ">
           جدیدترین بانی مد
         </p>
         <div className="flex flex-row justify-between w-full mt-4">
-          <CardComponent title={'لیست سیسمونی نوزاد پسر و دختر '} imageUrl={'https://www.banimode.com/blog/wp-content/uploads/2022/11/Sesame-list-of-baby-boys-and-girls-300x200.jpg'}/>
-          <CardComponent title={'شب یلدا چیست ؟ '} imageUrl={'https://www.banimode.com/blog/wp-content/uploads/2021/12/TURMERICSAFFRON-1-300x200.jpg'}/>
-          <CardComponent title={'هدیه روز مادر'} imageUrl={'https://www.banimode.com/blog/wp-content/uploads/2023/01/banimode_MothersDay_gift-1-300x200.jpg'}/>
-          <CardComponent title={'روز مادر سال 1401'} imageUrl={'https://www.banimode.com/blog/wp-content/uploads/2023/01/mothersdaty-300x200.jpg'}/>
+          <CardComponent
+            title={"لیست سیسمونی نوزاد پسر و دختر "}
+            imageUrl={
+              "https://www.banimode.com/blog/wp-content/uploads/2022/11/Sesame-list-of-baby-boys-and-girls-300x200.jpg"
+            }
+          />
+          <CardComponent
+            title={"شب یلدا چیست ؟ "}
+            imageUrl={
+              "https://www.banimode.com/blog/wp-content/uploads/2021/12/TURMERICSAFFRON-1-300x200.jpg"
+            }
+          />
+          <CardComponent
+            title={"هدیه روز مادر"}
+            imageUrl={
+              "https://www.banimode.com/blog/wp-content/uploads/2023/01/banimode_MothersDay_gift-1-300x200.jpg"
+            }
+          />
+          <CardComponent
+            title={"روز مادر سال 1401"}
+            imageUrl={
+              "https://www.banimode.com/blog/wp-content/uploads/2023/01/mothersdaty-300x200.jpg"
+            }
+          />
         </div>
       </div>
-      <News/>
+      <News />
+      <Footer />
     </div>
   );
 }
