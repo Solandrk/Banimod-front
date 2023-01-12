@@ -5,6 +5,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import { Button, Carousel } from "react-bootstrap";
 import Slider from "./Slider";
+import CardComponent from "./CardComponent";
+import CustomButton from "./CustomButton";
+import News from "./News";
 function App() {
   return (
     <div className="flex flex-1 flex-col bg-white ">
@@ -118,15 +121,7 @@ function App() {
           </div>
           {/* Slide Bar */}
           <div className="flex w-full mt-6 bg-gray-400 h-80"></div>
-          <div
-            style={{
-              borderWidth: 1,
-              borderColor: "green",
-            }}
-            className="flex items-center justify-center  h-12 px-16 mt-3 text-green-600 font-bold text-lg self-center rounded-full "
-          >
-            <p>مشاهده ی همه</p>
-          </div>
+          <CustomButton title={"مشاهده ی همه "} />
         </div>
 
         {/* Special Products */}
@@ -138,26 +133,18 @@ function App() {
           </div>
           {/* Slide Bar */}
           <div className="flex w-full mt-6 bg-gray-400 h-80"></div>
-          <div
-            style={{
-              borderWidth: 1,
-              borderColor: "green",
-            }}
-            className="flex items-center justify-center  h-12 px-16 mt-3 text-green-600 font-bold text-lg self-center rounded-full "
-          >
-            <p>مشاهده ی همه</p>
-          </div>
+          <CustomButton title={"مشاهده ی همه "} />
         </div>
       </div>
       {/* تاییدیه ها  */}
-      <div className="flex flex-row w-full  pt-8 mt-6 justify-between">
+      <div className="flex flex-row w-full px-8 pt-8 mt-6 justify-between">
         {/* Item */}
         <div className="flex flex-col w-1/5 h-64 items-center">
           <img src="https://www.banimode.com/img/cms/000719/1633949580.jpg"></img>
           <p className="text-lg text-gray-700 font-medium">
             ارسال سریع و رایگان
           </p>
-          <p className="text-base text-gray-600 ">
+          <p className="text-base text-center text-gray-600 ">
             ارسال رایگان برای خرید های بالای ۱ میلیون و ۲۰۰ هزار تومان و در زمان
             انتخابی مشتری به سریعترین شکل ممکن می باشد{" "}
           </p>
@@ -172,19 +159,43 @@ function App() {
         </div>
         <div className="flex flex-col w-1/5 h-64  items-center">
           <img src="https://www.banimode.com/img/cms/000719/1633949531.jpg"></img>
-          <p className="text-lg text-gray-700 font-medium">
-           ضمانت بازگشت کالا
+          <p className="text-lg text-gray-700 font-medium">ضمانت بازگشت کالا</p>
+          <p className="text-base text-center text-gray-600 ">
+            تا ۱۵ روز برای احترام به انتخاب مشتریان کالای خریداری شده برگردانده
+            می شود
           </p>
-          <p className="text-base text-center text-gray-600 ">تا ۱۵ روز برای احترام به انتخاب مشتریان کالای خریداری شده برگردانده می شود</p>
         </div>
         <div className="flex flex-col w-1/5 h-64 items-center">
           <img src="https://www.banimode.com/img/cms/000719/1633949430.jpg"></img>
-          <p className="text-lg text-gray-700 font-medium">
-            خدمات پس از خرید
+          <p className="text-lg text-gray-700 font-medium">خدمات پس از خرید</p>
+          <p className="text-base text-center text-gray-600 ">
+            {" "}
+            میزبان صدای گرمتان هستیم. هدف تیم پشتیبانی بانی مد تباش با تمام قوا
+            برای ارائه بهترین خدمات به مشتریان عزیز میباشد{" "}
           </p>
-          <p className="text-base text-cetner text-gray-600 "> میزبان صدای گرمتان هستیم. هدف تیم پشتیبانی بانی مد تباش با تمام قوا برای ارائه بهترین خدمات به مشتریان عزیز میباشد </p>
         </div>
       </div>
+      <div className="flex flex-col w-full bg-gray-100 mt-24">
+        <p className="text-3xl font-medium text-center mt-8">
+          {" "}
+          برترین برندها در بانی مد
+        </p>
+        <div className="w-full h-12 bg-white mt-4 "></div>
+        <CustomButton title={"مشاهده ی همه برند ها"} />
+      </div>
+
+      <div className="flex flex-col mt-16">
+        <p className="text-3xl text-black font-medium text-center ">
+          جدیدترین بانی مد
+        </p>
+        <div className="flex flex-row justify-between w-full mt-4">
+          <CardComponent title={'لیست سیسمونی نوزاد پسر و دختر '} imageUrl={'https://www.banimode.com/blog/wp-content/uploads/2022/11/Sesame-list-of-baby-boys-and-girls-300x200.jpg'}/>
+          <CardComponent title={'شب یلدا چیست ؟ '} imageUrl={'https://www.banimode.com/blog/wp-content/uploads/2021/12/TURMERICSAFFRON-1-300x200.jpg'}/>
+          <CardComponent title={'هدیه روز مادر'} imageUrl={'https://www.banimode.com/blog/wp-content/uploads/2023/01/banimode_MothersDay_gift-1-300x200.jpg'}/>
+          <CardComponent title={'روز مادر سال 1401'} imageUrl={'https://www.banimode.com/blog/wp-content/uploads/2023/01/mothersdaty-300x200.jpg'}/>
+        </div>
+      </div>
+      <News/>
     </div>
   );
 }
