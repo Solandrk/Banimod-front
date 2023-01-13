@@ -9,8 +9,8 @@ export default function List({ title, options }) {
           <p className="text-gray-400 text-xl">{title}</p>
           {/* buttonse */}
           {options.map((item, index) => {
-            if (index == 0) return <p className="mt-2">{item}</p>;
-            else return <p>{item}</p>;
+            if (index == 0) return <p className="mt-2 hover:text-green-500 hover:cursor-pointer">{item}</p>;
+            else return <p className="hover:text-green-500 hover:cursor-pointer">{item}</p>;
           })}
         </div>
       </div>
